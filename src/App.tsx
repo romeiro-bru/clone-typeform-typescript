@@ -1,24 +1,29 @@
 import React from 'react';
+import FirstAndSecond from './components/FirstAndSecond';
+
 import GlobalStyles from './styles/global';
 import { Main, Section, Sticky } from './styles';
+import Header from './components/Header';
 
 function App() {
+  React.useEffect(() => {}, [])
+
   return (
     <>
       <GlobalStyles />
 
+      <Header />
+
       <Main style={{ height: '1610vh' }}>
         <Section style={{ height:'72.7%' }} >
-          <Sticky className="first" />
-          <Sticky className="second" />
-
+          <FirstAndSecond /> 
         </Section>
 
         <Section style={{ height: '9.7%' }}>
          <Sticky className="third" />
         </Section>
 
-        <Section style={{ height: '9.7%' }}>
+        <Section style={{ height: '10.1%' }}>
           <Sticky className="fourth" />
         </Section>
 
